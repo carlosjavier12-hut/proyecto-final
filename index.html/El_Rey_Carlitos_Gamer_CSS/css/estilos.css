@@ -1,0 +1,327 @@
+/* ESTILOS.CSS - diseño visual gamer */
+
+/* Encabezado */
+.encabezado {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(7, 11, 20, .96);
+    border-bottom: 1px solid rgba(0, 200, 255, .35);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .25);
+}
+
+.encabezado-contenido {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logo {
+    color: var(--azul-claro);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+}
+
+.menu a {
+    color: var(--blanco);
+    font-size: .9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+.menu a:hover {
+    color: var(--azul);
+}
+
+/* Portada */
+.portada {
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    align-items: center;
+    gap: 40px;
+    min-height: 390px;
+    margin-top: 34px;
+    padding: 42px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #10314e, #101827 72%);
+    border: 1px solid rgba(0, 200, 255, .4);
+    border-radius: 22px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .25);
+}
+
+.etiqueta {
+    margin-bottom: 10px;
+    color: var(--azul);
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.portada h1 {
+    margin-bottom: 16px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.2;
+}
+
+.portada h1 span {
+    color: var(--azul-claro);
+}
+
+.portada-texto > p:not(.etiqueta) {
+    max-width: 560px;
+    margin-bottom: 24px;
+    color: var(--gris);
+}
+
+.boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 12px 22px;
+    color: #03111a;
+    background: var(--azul);
+    border: 0;
+    border-radius: 9px;
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+}
+
+.boton:hover {
+    transform: translateY(-2px);
+    background: var(--azul-claro);
+    box-shadow: 0 8px 24px rgba(0, 200, 255, .25);
+}
+
+.portada-destacado {
+    padding: 14px;
+    background: rgba(4, 10, 20, .55);
+    border: 1px solid rgba(0, 200, 255, .3);
+    border-radius: 16px;
+}
+
+.portada-destacado img {
+    width: 100%;
+    height: 235px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.portada-destacado p {
+    padding-top: 10px;
+    color: var(--gris);
+    text-align: center;
+    font-size: .85rem;
+}
+
+/* Títulos */
+.titulo-seccion {
+    margin-bottom: 26px;
+    text-align: center;
+}
+
+.titulo-seccion h2,
+.bloque-lista h2 {
+    margin-bottom: 8px;
+    color: var(--azul-claro);
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(1.25rem, 2.5vw, 1.8rem);
+}
+
+.titulo-seccion > p:last-child {
+    color: var(--gris);
+}
+
+/* Tarjetas de videojuegos */
+.rejilla-juegos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.tarjeta-juego {
+    min-width: 0;
+    overflow: hidden;
+    background: #091321;
+    border: 1px solid rgba(0, 200, 255, .2);
+    border-radius: 15px;
+    transition: transform .2s ease, border-color .2s ease;
+}
+
+.tarjeta-juego:hover {
+    transform: translateY(-4px);
+    border-color: var(--azul);
+}
+
+.tarjeta-juego > img {
+    width: 100%;
+    height: 230px;
+    padding: 8px;
+    object-fit: contain;
+    background: #050a12;
+}
+
+.tarjeta-contenido {
+    padding: 20px;
+}
+
+.tarjeta-contenido h3 {
+    margin-bottom: 8px;
+    color: var(--azul-claro);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+}
+
+.tarjeta-contenido p {
+    min-height: 72px;
+    margin-bottom: 14px;
+    color: var(--gris);
+    font-size: .9rem;
+}
+
+.tarjeta-contenido a {
+    color: var(--azul);
+    font-size: .82rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.tarjeta-contenido a:hover {
+    color: var(--azul-claro);
+}
+
+/* Listas y plataformas */
+.dos-columnas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.bloque-lista {
+    margin: 0 0 34px;
+}
+
+.lista-top,
+.lista-plataformas {
+    padding-left: 24px;
+}
+
+.lista-top li,
+.lista-plataformas li {
+    margin: 10px 0;
+    padding: 10px 13px;
+    background: rgba(0, 200, 255, .07);
+    border-left: 3px solid var(--azul);
+    border-radius: 5px;
+}
+
+/* Galería */
+.rejilla-galeria {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.rejilla-galeria img {
+    width: 100%;
+    height: 180px;
+    padding: 5px;
+    object-fit: contain;
+    background: #050a12;
+    border: 1px solid rgba(0, 200, 255, .35);
+    border-radius: 12px;
+}
+
+/* Formulario */
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+}
+
+.campo-completo {
+    grid-column: 1 / -1;
+}
+
+.campo label {
+    color: var(--azul-claro);
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    min-height: 46px;
+    padding: 11px 13px;
+    color: var(--blanco);
+    background: #080f1b;
+    border: 1px solid #30445c;
+    border-radius: 8px;
+    outline: none;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: var(--azul);
+    box-shadow: 0 0 0 3px rgba(0, 200, 255, .12);
+}
+
+.campo textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.campo-completo .boton {
+    width: 100%;
+}
+
+/* Pie de página */
+.pie {
+    margin-top: 48px;
+    padding: 36px 0;
+    background: #040810;
+    border-top: 1px solid rgba(0, 200, 255, .3);
+    text-align: center;
+}
+
+.pie h2 {
+    margin-bottom: 10px;
+    color: var(--azul-claro);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+}
+
+.pie p,
+.pie small {
+    color: var(--gris);
+}

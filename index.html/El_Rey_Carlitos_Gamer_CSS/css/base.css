@@ -1,0 +1,60 @@
+/* BASE.CSS - configuración general */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --fondo: #070b14;
+    --panel: #101a2b;
+    --panel-secundario: #14243a;
+    --azul: #00c8ff;
+    --azul-claro: #72e5ff;
+    --blanco: #edf7ff;
+    --gris: #a8b8ca;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    min-width: 320px;
+    color: var(--blanco);
+    background:
+        radial-gradient(circle at 12% 0%, rgba(0, 200, 255, .13), transparent 30rem),
+        var(--fondo);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.65;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+button, input, select, textarea {
+    font: inherit;
+}
+
+.contenedor {
+    width: min(1120px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+.seccion {
+    margin: 34px 0;
+    padding: 32px;
+    background: linear-gradient(145deg, rgba(20, 36, 58, .96), rgba(13, 22, 37, .98));
+    border: 1px solid rgba(0, 200, 255, .2);
+    border-radius: 20px;
+    box-shadow: 0 15px 38px rgba(0, 0, 0, .22);
+}
